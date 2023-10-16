@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.1",
+    "morgan": "^1.10.0"
+  },
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js ",
+    "build:ui": "rm -rf build && cd ../../part2/2.6thePhonebook && npm run build && cp -r build ../../part3/3.1PhonebookBackend && rm -rf build && cd ../../part3/3.1PhonebookBackend",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
